@@ -138,7 +138,7 @@ $categories = $categoriesStmt->fetchAll(PDO::FETCH_COLUMN);
                         <?php if ($book['is_featured']): ?>
                             <span class="product-badge">Coup de coeur</span>
                         <?php endif; ?>
-                        <img src="<?= BASE_URL ?>/assets/img/books/<?= sanitize($book['image']) ?>" 
+                        <img src="<?= getBookImage($book['image']) ?>" 
                              alt="Couverture de <?= sanitize($book['title']) ?>"
                              loading="lazy">
                     </div>

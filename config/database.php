@@ -140,4 +140,18 @@ function getCartTotal($pdo): float {
     }
     return $total;
 }
+/**
+ * Retourne l'URL de l'image d'un livre
+ * Gère les URLs externes et les images locales
+ */
+function getBookImage(string $image): string {
+    // Si c'est déjà une URL externe
+    if (strpos($image, 'http://') === 0 || strpos($image, 'https://') === 0) {
+        return $image;
+    }
+
+    // Sinon, c'est une image locale
+    return BASE_URL . '/assets/img/books/' . $image;
+}
+
 ?>

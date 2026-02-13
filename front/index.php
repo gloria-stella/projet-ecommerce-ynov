@@ -60,7 +60,7 @@ $categories = $categoriesStmt->fetchAll();
                 <article class="product-card">
                     <div class="product-card-image">
                         <span class="product-badge">Coup de coeur</span>
-                        <img src="<?= BASE_URL ?>/assets/img/books/<?= sanitize($book['image']) ?>" 
+                        <img src="<?= getBookImage($book['image']) ?>" 
                              alt="Couverture de <?= sanitize($book['title']) ?>"
                              loading="lazy">
                     </div>
@@ -101,7 +101,9 @@ $categories = $categoriesStmt->fetchAll();
                 'Cuisine' => '🍳',
                 'Developpement personnel' => '🌟',
                 'Aventure' => '🗺️',
-                'Poesie' => '🌸'
+                'Poesie' => '🌸',
+                'Romance' => '❤️',
+            
             ];
             foreach ($categories as $cat): 
                 $icon = $categoryIcons[$cat['category']] ?? '📚';
@@ -126,7 +128,7 @@ $categories = $categoriesStmt->fetchAll();
             <?php foreach ($newBooks as $book): ?>
                 <article class="product-card">
                     <div class="product-card-image">
-                        <img src="<?= BASE_URL ?>/assets/img/books/<?= sanitize($book['image']) ?>" 
+                        <img src="<?= getBookImage($book['image']) ?>" 
                              alt="Couverture de <?= sanitize($book['title']) ?>"
                              loading="lazy">
                     </div>

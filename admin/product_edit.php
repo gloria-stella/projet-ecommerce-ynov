@@ -166,7 +166,8 @@ $categories = $pdo->query("SELECT DISTINCT category FROM items WHERE category IS
                     
                     <div class="form-group">
                         <label>Image actuelle</label>
-                        <img src="<?= BASE_URL ?>/assets/img/books/<?= sanitize($book['image']) ?>" alt="" style="max-width: 150px; display: block; margin: 10px 0; border-radius: var(--radius);">
+                        <img src="<?= getBookImage($book['image']) ?>" alt="" style="max-width: 150px; display: block; margin: 10px 0; border-radius: var(--radius);">
+                        
                         <label for="image">Nouvelle image (optionnel)</label>
                         <input type="file" name="image" id="image" accept="image/*">
                     </div>

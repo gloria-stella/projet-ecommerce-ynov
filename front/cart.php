@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
                 }
                 
-                // Frais de livraison (gratuit au-dessus de 35 EUR)
+                // Frais de livraison
                 $shipping = $subtotal >= 35 ? 0 : 4.90;
                 $total = $subtotal + $shipping;
                 
@@ -118,7 +118,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 
                 $pdo->commit();
                 
-                // Vider le panier
                 unset($_SESSION['cart']);
                 
                 setFlashMessage('success', 'Commande #' . $orderId . ' passee avec succes ! Numero de facture : ' . $invoiceNumber);
@@ -176,7 +175,7 @@ $total = $subtotal + $shipping;
                     <?php foreach ($cartItems as $cartItem): ?>
                         <div class="cart-item">
                             <div class="cart-item-image">
-                                <img src="<?= BASE_URL ?>/assets/img/books/<?= sanitize($cartItem['item']['image']) ?>" 
+                                <img src="<?= getBookImage($cartItem['item']['image']) ?>" 
                                      alt="<?= sanitize($cartItem['item']['title']) ?>">
                             </div>
                             

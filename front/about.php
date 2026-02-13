@@ -13,8 +13,8 @@ include '../includes/header.php';
         <section class="about-section">
             <h2>Notre Histoire</h2>
             <p>
-                <strong>Youlla Books</strong> est nee d'une passion simple mais profonde : celle des livres et de leur pouvoir de transformation. 
-                Fondee en 2024 par une equipe de passionnes de lecture, notre librairie en ligne s'est donnee pour mission de rendre 
+                <strong>Youlla Books</strong> est née d'une passion simple mais profonde : celle des livres et de leur pouvoir de transformation. 
+                Fondée en 2024 par 2 amies passionnées de lecture, notre librairie en ligne s'est donnée pour mission de rendre 
                 la litterature accessible a tous, sans exception.
             </p>
             <p>
@@ -44,7 +44,7 @@ include '../includes/header.php';
                 <div class="value-card">
                     <span class="value-icon" aria-hidden="true">🤝</span>
                     <h3>Service</h3>
-                    <p>Votre satisfaction est notre priorite. Notre equipe est a votre ecoute pour repondre a vos questions et vous conseiller dans vos choix.</p>
+                    <p>Votre satisfaction est notre priorité. Notre equipe est a votre ecoute pour repondre a vos questions et vous conseiller dans vos choix.</p>
                 </div>
             </div>
         </section>

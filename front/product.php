@@ -22,7 +22,6 @@ $pageTitle = $book['title'];
 
 // Ajouter au panier
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_to_cart'])) {
-    // Verifier le token CSRF
     if (!isset($_POST['csrf_token']) || !verifyCSRFToken($_POST['csrf_token'])) {
         setFlashMessage('error', 'Erreur de securite. Veuillez reessayer.');
     } else {
@@ -73,7 +72,7 @@ include '../includes/header.php';
     <!-- Detail du produit -->
     <div class="product-detail">
         <div class="product-detail-image">
-            <img src="<?= BASE_URL ?>/assets/img/books/<?= sanitize($book['image']) ?>" 
+            <img src="<?= getBookImage($book['image']) ?>" 
                  alt="Couverture de <?= sanitize($book['title']) ?>">
         </div>
         
@@ -181,7 +180,7 @@ include '../includes/header.php';
             <?php foreach ($similarBooks as $similar): ?>
                 <article class="product-card">
                     <div class="product-card-image">
-                        <img src="<?= BASE_URL ?>/assets/img/books/<?= sanitize($similar['image']) ?>" 
+                        <img src="<?= getBookImage($similar['image']) ?>" 
                              alt="Couverture de <?= sanitize($similar['title']) ?>"
                              loading="lazy">
                     </div>

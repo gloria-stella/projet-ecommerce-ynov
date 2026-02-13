@@ -76,7 +76,7 @@ $flash = getFlashMessage();
                     <?php foreach ($books as $book): ?>
                         <tr>
                             <td>
-                                <img src="<?= BASE_URL ?>/assets/img/books/<?= sanitize($book['image']) ?>" alt="">
+                                <img src="<?= getBookImage($book['image']) ?>" alt="">
                             </td>
                             <td><strong><?= sanitize($book['title']) ?></strong></td>
                             <td><?= sanitize($book['author']) ?></td>
