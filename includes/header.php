@@ -66,13 +66,15 @@ $flash = getFlashMessage();
     <!-- Header principal -->
     <header class="main-header" role="banner">
         <div class="container">
-            <a href="<?= BASE_URL ?>/front/index.php" class="logo" aria-label="Youlla Books - Retour a l'accueil">
-                <span class="logo-icon" aria-hidden="true">📚</span>
-                <span class="logo-text">
-                    <span class="logo-main">Youlla Books</span>
-                    <span class="logo-tagline">Lire, c'est vivre mille vies</span>
-                </span>
-            </a>
+           <a href="<?= BASE_URL ?>/front/index.php" class="logo" aria-label="Youlla Books - Retour a l'accueil">
+    <img src="../assets/img/books/logo1.png" 
+         alt="Logo Youlla Books" 
+         class="logo-img">
+    <span class="logo-text">
+        <span class="logo-tagline">Lire, c'est vivre mille vies</span>
+    </span>
+</a>
+
             
             <nav class="main-nav" role="navigation" aria-label="Navigation principale">
                 <ul class="nav-list">
